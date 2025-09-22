@@ -9,7 +9,7 @@ letters = {
     "Z": "Z"
 }
 
-let quote = {content: "test quote", author: "Me"}
+quote = {content: "test quote", author: "Me"}
 
 function randint(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -22,7 +22,7 @@ function resetLetters() {
 }
 
 function substitute() {
-  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split();
   let curKey = "Z";
   let index;
   for (var i = 1; i < alphabet.length; i++) {
