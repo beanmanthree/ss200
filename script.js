@@ -22,7 +22,7 @@ function resetLetters() {
 }
 
 function substitute() {
-  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split();
+  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   let curKey = "Z";
   let index;
   for (var i = 1; i < alphabet.length; i++) {
