@@ -31,6 +31,7 @@ function substitute() {
     curKey = alphabet[index]
     alphabet.push(alphabet.splice(index, 1)[0]);
   }
+  letters[curKey] = "Z";
 }
 
 function generateCiphertext() {
