@@ -1,4 +1,4 @@
-let quote, cipher, ciphertext, substitutions
+let quote, cipher, ciphertext, letters;
 
 letters = {
     "A": "A", "B": "B", "C": "C", "D": "D", "E": "E",
@@ -35,7 +35,7 @@ function substitute() {
       notLoop = 0;
     } else if (!index) {
       notLoop = 1;
-      arr.unshift(arr.splice(randint(notLoop, alphabet.length - i - 2)));
+      alphabet.unshift(alphabet.splice(randint(notLoop, alphabet.length - i - 1))[0]);
     }
   }
   letters[curKey] = alphabet[0];
