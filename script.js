@@ -36,6 +36,7 @@ function substitute() {
     } else if (!index) {
       notLoop = 1;
       alphabet.unshift(alphabet.splice(randint(notLoop, alphabet.length - i))[0]);
+      curKey = alphabet[0];
     }
   }
   letters[curKey] = alphabet[0];
