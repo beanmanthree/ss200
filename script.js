@@ -39,7 +39,6 @@ function substitute() {
       curKey = alphabet[0];
     }
   }
-  letters[curKey] = alphabet[0];
 }
 
 function generateCiphertext() {
