@@ -27,7 +27,7 @@ function substitute() {
   let index;
   let notLoop = 1;
   for (var i = 1; i < alphabet.length; i++) {
-    index = randint(notLoop, alphabet.length - i - 1);
+    index = randint(notLoop, alphabet.length - i);
     letters[curKey] = alphabet[index];
     curKey = alphabet[index];
     alphabet.push(alphabet.splice(index, 1)[0]);
