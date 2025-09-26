@@ -23,22 +23,15 @@ function resetLetters() {
 
 function substitute() {
   let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-  let curKey = "A";
+  let curKey = "Z";
   let index;
-  let notLoop = 1;
   for (var i = 1; i < alphabet.length; i++) {
-    index = randint(notLoop, alphabet.length - i);
+    index = randint(0, alphabet.length - i - 1)
     letters[curKey] = alphabet[index];
-    curKey = alphabet[index];
+    curKey = alphabet[index]
     alphabet.push(alphabet.splice(index, 1)[0]);
-    if (notLoop) {
-      notLoop = 0;
-    } else if (!index) {
-      notLoop = 1;
-      alphabet.unshift(alphabet.splice(randint(notLoop, alphabet.length - i), 1)[0]);
-      curKey = alphabet[0];
-    }
   }
+  letters[curKey] = "Z";
 }
 
 function generateCiphertext() {
