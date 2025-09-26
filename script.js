@@ -9,7 +9,7 @@ letters = {
     "Z": "Z"
 }
 
-quote = {content: "test quote", author: "Me"}
+quote = {content: "testquote", author: "Me"}
 
 function randint(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -40,9 +40,10 @@ function generateCipherText() {
   switch(cipher) {
     case "aristocrat":
       substitute();
-      for (const letter in quote.content) {
-        cipherText.push(letter.match(/[a-z]/i) ? letters[letter.toUpperCase()] : letter);
+      for (const char of quote.content) {
+        cipherText += char.match(/[a-z]/i) ? letters[char.toUpperCase()] : char;
       }
+      break;
   }
 }
 
