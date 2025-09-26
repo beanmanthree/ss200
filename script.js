@@ -1,4 +1,4 @@
-let quote, cipher, ciphertext, letters;
+let quote, cipher, cipherText, letters;
 
 letters = {
     "A": "A", "B": "B", "C": "C", "D": "D", "E": "E",
@@ -34,14 +34,20 @@ function substitute() {
   letters[curKey] = "Z";
 }
 
-function generateCiphertext() {
+function generateCipherText() {
   resetLetters();
   cipherText = "";
   switch(cipher) {
     case "aristocrat":
       substitute();
-      for (const letter in quote) {
-        cipherText.push(letters[letter.toUpperCase()]);
+      for (const letter in quote.content) {
+        cipherText.push(letter.match(/[a-z]/i) ? letters[letter.toUpperCase()] : letter);
       }
   }
 }
+
+cipher = "aristocrat";
+
+generateCipherText();
+
+console.log(cipherText);
